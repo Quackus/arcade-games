@@ -185,6 +185,8 @@ public class Menu
 
             _titleColor = Color.White;
 
+            SplashKit.SelectSpritePack("Menu");
+
             initRocks();
 
     }

@@ -12,6 +12,9 @@ public class Program
         Game Game = null;
         Menu Menu = new Menu(gameWindow);
 
+        SplashKit.CreateSpritePack("Menu");
+        SplashKit.CreateSpritePack("Game");
+
         FrameTickLog ftl = new FrameTickLog(gameWindow,"pricedown_bl",50);
         ftl.Start();
 
@@ -21,11 +24,13 @@ public class Program
             ftl.Reset();
             SplashKit.ProcessEvents();
             gameWindow.Clear(Color.Black);      // reset screen 
+
             if (SplashKit.KeyTyped(KeyCode.EscapeKey)) _GameExit = true;
             if (gameWindow.CloseRequested) _GameExit = true;
-
+            Console.WriteLine(Menu.GameStarted);
             if (!Menu.GameStarted)
             {
+                
                 Menu.DrawMenu();
                 Menu.Selection();
 

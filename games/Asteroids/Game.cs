@@ -39,6 +39,7 @@ public class Game
             _Players[1]._PlayerScore = _PlayerScores[1];
         }
 
+        SplashKit.SelectSpritePack("Game");
 
         //_gameLevel = new Debuglvl(_GameWindow, this);
         _gameLevel = new Level1(_GameWindow, this);
